@@ -1,0 +1,37 @@
+---
+title: "pp_profiling"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+
+```{python}
+pip install klib
+```
+```{python}
+pip install pandas
+```
+```{python}
+pip install seaborn
+```
+```{python}
+import warnings
+
+# hide warnings
+warnings.filterwarnings("ignore")
+```
+```{python}
+import klib
+import pandas as pd
+import seaborn as sns
+
+df = sns.load_dataset("titanic")
+df.head()
+```
